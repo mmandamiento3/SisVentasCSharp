@@ -1,0 +1,10 @@
+D:\SistemaVentas_C#\SistemaVentas\CapaDatos\bin\Debug\CapaDatos.dll
+D:\SistemaVentas_C#\SistemaVentas\CapaDatos\bin\Debug\CapaDatos.pdb
+D:\SistemaVentas_C#\SistemaVentas\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+D:\SistemaVentas_C#\SistemaVentas\CapaDatos\obj\Debug\CapaDatos.dll
+D:\SistemaVentas_C#\SistemaVentas\CapaDatos\obj\Debug\CapaDatos.pdb
+E:\SistemaVentas_C#\SistemaVentas\CapaDatos\bin\Debug\CapaDatos.dll
+E:\SistemaVentas_C#\SistemaVentas\CapaDatos\bin\Debug\CapaDatos.pdb
+E:\SistemaVentas_C#\SistemaVentas\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+E:\SistemaVentas_C#\SistemaVentas\CapaDatos\obj\Debug\CapaDatos.dll
+E:\SistemaVentas_C#\SistemaVentas\CapaDatos\obj\Debug\CapaDatos.pdb
