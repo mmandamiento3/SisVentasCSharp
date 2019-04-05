@@ -198,7 +198,7 @@ namespace CapaDatos
 
                 SqlParameter ParFecha = new SqlParameter();
                 ParFecha.ParameterName = "@fecha";
-                ParFecha.SqlDbType = SqlDbType.Date;
+                ParFecha.SqlDbType = SqlDbType.DateTime;
                 ParFecha.Value = Ingreso.Fecha;
                 SqlCmd.Parameters.Add(ParFecha);
 
@@ -373,14 +373,14 @@ namespace CapaDatos
 
                 SqlParameter ParFEchaInicio = new SqlParameter();
                 ParFEchaInicio.ParameterName = "@fechaInicio";
-                ParFEchaInicio.SqlDbType = SqlDbType.VarChar;
+                ParFEchaInicio.SqlDbType = SqlDbType.DateTime;
                 ParFEchaInicio.Size = 50;
                 ParFEchaInicio.Value = Fechainicio;
                 SqlCmd.Parameters.Add(ParFEchaInicio);
 
                 SqlParameter ParFechafin = new SqlParameter();
                 ParFechafin.ParameterName = "@fechaFin";
-                ParFechafin.SqlDbType = SqlDbType.VarChar;
+                ParFechafin.SqlDbType = SqlDbType.DateTime;
                 ParFechafin.Size = 50;
                 ParFechafin.Value = FEchafin;
                 SqlCmd.Parameters.Add(ParFechafin);

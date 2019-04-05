@@ -19,6 +19,7 @@ namespace CapaNegocio
             DIngreso obj = new DIngreso();
             obj.IdTrabajador = idtrabajador;
             obj.Idproveedor = idproveedor;
+            obj.Fecha = fecha;
             obj.Tipo_comprobante = tipo_comprobante;
             obj.Serie = serie;
             obj.Correlativo = corelativo;

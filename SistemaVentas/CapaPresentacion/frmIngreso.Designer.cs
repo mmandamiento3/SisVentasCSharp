@@ -42,13 +42,12 @@
             this.dtFecha2 = new System.Windows.Forms.DateTimePicker();
             this.dtFecha1 = new System.Windows.Forms.DateTimePicker();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnAnular = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.chkEliminar = new System.Windows.Forms.CheckBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -87,6 +86,7 @@
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnmostrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -126,8 +126,10 @@
             this.dataListado.Name = "dataListado";
             this.dataListado.ReadOnly = true;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(726, 150);
+            this.dataListado.Size = new System.Drawing.Size(945, 150);
             this.dataListado.TabIndex = 5;
+            this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
+            this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
             // 
             // btnBuscarProveedor
             // 
@@ -178,11 +180,12 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnmostrar);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.dtFecha2);
             this.tabPage1.Controls.Add(this.dtFecha1);
             this.tabPage1.Controls.Add(this.btnImprimir);
-            this.tabPage1.Controls.Add(this.btnEliminar);
+            this.tabPage1.Controls.Add(this.btnAnular);
             this.tabPage1.Controls.Add(this.btnBuscar);
             this.tabPage1.Controls.Add(this.dataListado);
             this.tabPage1.Controls.Add(this.lblTotal);
@@ -191,7 +194,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(967, 403);
+            this.tabPage1.Size = new System.Drawing.Size(967, 425);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -233,29 +236,31 @@
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.UseVisualStyleBackColor = true;
             // 
-            // btnEliminar
+            // btnAnular
             // 
-            this.btnEliminar.Image = global::CapaPresentacion.Properties.Resources.delete;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(596, 25);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(72, 23);
-            this.btnEliminar.TabIndex = 7;
-            this.btnEliminar.Text = "&Anular";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnAnular.Image = global::CapaPresentacion.Properties.Resources.delete;
+            this.btnAnular.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnAnular.Location = new System.Drawing.Point(596, 25);
+            this.btnAnular.Name = "btnAnular";
+            this.btnAnular.Size = new System.Drawing.Size(72, 23);
+            this.btnAnular.TabIndex = 7;
+            this.btnAnular.Text = "&Anular";
+            this.btnAnular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAnular.UseVisualStyleBackColor = true;
+            this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.search;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(511, 26);
+            this.btnBuscar.Location = new System.Drawing.Point(407, 26);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(68, 23);
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "&Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblTotal
             // 
@@ -275,18 +280,20 @@
             this.chkEliminar.TabIndex = 3;
             this.chkEliminar.Text = "Anular";
             this.chkEliminar.UseVisualStyleBackColor = true;
+            this.chkEliminar.CheckedChanged += new System.EventHandler(this.chkEliminar_CheckedChanged);
             // 
             // btnNuevo
             // 
             this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources._new;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(432, 362);
+            this.btnNuevo.Location = new System.Drawing.Point(492, 363);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(71, 23);
             this.btnNuevo.TabIndex = 7;
             this.btnNuevo.Text = "&Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnCancelar
             // 
@@ -299,18 +306,7 @@
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Image = global::CapaPresentacion.Properties.Resources.edit;
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnEditar.Location = new System.Drawing.Point(597, 362);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(65, 23);
-            this.btnEditar.TabIndex = 5;
-            this.btnEditar.Text = "E&ditar";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // ttMensaje
             // 
@@ -320,13 +316,14 @@
             // 
             this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.save;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(509, 362);
+            this.btnGuardar.Location = new System.Drawing.Point(580, 362);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(78, 23);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // pictureBox1
             // 
@@ -373,10 +370,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(5, 50);
+            this.tabControl1.Location = new System.Drawing.Point(12, 50);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(975, 429);
+            this.tabControl1.Size = new System.Drawing.Size(975, 451);
             this.tabControl1.TabIndex = 9;
             // 
             // tabPage2
@@ -385,7 +382,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(967, 403);
+            this.tabPage2.Size = new System.Drawing.Size(967, 425);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -411,7 +408,6 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btnNuevo);
             this.groupBox1.Controls.Add(this.btnCancelar);
-            this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -472,8 +468,9 @@
             this.dataListadoDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataListadoDetalles.Location = new System.Drawing.Point(16, 104);
             this.dataListadoDetalles.Name = "dataListadoDetalles";
-            this.dataListadoDetalles.Size = new System.Drawing.Size(726, 118);
+            this.dataListadoDetalles.Size = new System.Drawing.Size(886, 118);
             this.dataListadoDetalles.TabIndex = 41;
+            this.dataListadoDetalles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListadoDetalles_CellContentClick);
             // 
             // btnQuitar
             // 
@@ -483,6 +480,7 @@
             this.btnQuitar.Size = new System.Drawing.Size(30, 26);
             this.btnQuitar.TabIndex = 40;
             this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
             // btnAgregar
             // 
@@ -492,6 +490,7 @@
             this.btnAgregar.Size = new System.Drawing.Size(30, 28);
             this.btnAgregar.TabIndex = 39;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dtFechaVencimiento
             // 
@@ -701,6 +700,19 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
+            // btnmostrar
+            // 
+            this.btnmostrar.Image = global::CapaPresentacion.Properties.Resources.search;
+            this.btnmostrar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnmostrar.Location = new System.Drawing.Point(498, 26);
+            this.btnmostrar.Name = "btnmostrar";
+            this.btnmostrar.Size = new System.Drawing.Size(92, 23);
+            this.btnmostrar.TabIndex = 12;
+            this.btnmostrar.Text = "&Mostrar todos";
+            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnmostrar.UseVisualStyleBackColor = true;
+            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
+            // 
             // frmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -744,13 +756,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnImprimir;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnAnular;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.CheckBox chkEliminar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -792,5 +803,6 @@
         private System.Windows.Forms.Label lblTotalPagado;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView dataListadoDetalles;
+        private System.Windows.Forms.Button btnmostrar;
     }
 }

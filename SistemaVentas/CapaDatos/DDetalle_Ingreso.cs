@@ -175,7 +175,7 @@ namespace CapaDatos
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter ParIddetalle_ingreso = new SqlParameter();
-                ParIddetalle_ingreso.ParameterName = "@iddetalleingreso";
+                ParIddetalle_ingreso.ParameterName = "@iddetalle_ingreso";
                 ParIddetalle_ingreso.SqlDbType = SqlDbType.Int;
                 ParIddetalle_ingreso.Direction = ParameterDirection.Output;
                 SqlCmd.Parameters.Add(ParIddetalle_ingreso);
