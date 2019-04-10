@@ -108,6 +108,18 @@
     <Compile Include="frmVistaArticulo_Ingreso.Designer.cs">
       <DependentUpon>frmVistaArticulo_Ingreso.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVistaArticulo_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVistaArticulo_Venta.Designer.cs">
+      <DependentUpon>frmVistaArticulo_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVistaCliente_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVistaCliente_Venta.Designer.cs">
+      <DependentUpon>frmVistaCliente_Venta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVistaModalCategoria_Articulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +178,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVistaArticulo_Ingreso.resx">
       <DependentUpon>frmVistaArticulo_Ingreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVistaArticulo_Venta.resx">
+      <DependentUpon>frmVistaArticulo_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVistaCliente_Venta.resx">
+      <DependentUpon>frmVistaCliente_Venta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVistaModalCategoria_Articulo.resx">
       <DependentUpon>frmVistaModalCategoria_Articulo.cs</DependentUpon>

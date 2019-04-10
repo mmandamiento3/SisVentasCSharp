@@ -32,14 +32,20 @@
             this.lblTotalPagado = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataListadoDetalles = new System.Windows.Forms.DataGridView();
+            this.btnQuitar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.dtFechaVencimiento = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.txtPrecioCompra = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtStockActual = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnBuscarArticulo = new System.Windows.Forms.Button();
             this.txtArticulo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -54,17 +60,26 @@
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.txtIdVenta = new System.Windows.Forms.TextBox();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.txtIdCLiente = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnComprobante = new System.Windows.Forms.Button();
+            this.btnmostrar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dtFecha2 = new System.Windows.Forms.DateTimePicker();
             this.dtFecha1 = new System.Windows.Forms.DateTimePicker();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnAnular = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.dataListado = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -73,22 +88,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.label6 = new System.Windows.Forms.Label();
-            this.btnmostrar = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnAnular = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnQuitar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnBuscarArticulo = new System.Windows.Forms.Button();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnComprobante = new System.Windows.Forms.Button();
-            this.txtStockActual = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtDescuento = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoDetalles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
@@ -145,6 +145,26 @@
             this.dataListadoDetalles.Size = new System.Drawing.Size(886, 118);
             this.dataListadoDetalles.TabIndex = 41;
             // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Image = global::CapaPresentacion.Properties.Resources.delete1;
+            this.btnQuitar.Location = new System.Drawing.Point(724, 49);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(30, 26);
+            this.btnQuitar.TabIndex = 40;
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Image = global::CapaPresentacion.Properties.Resources.add_file;
+            this.btnAgregar.Location = new System.Drawing.Point(724, 11);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(30, 28);
+            this.btnAgregar.TabIndex = 39;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // dtFechaVencimiento
             // 
             this.dtFechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -180,6 +200,24 @@
             this.label13.TabIndex = 33;
             this.label13.Text = "Precio Compra :";
             // 
+            // txtDescuento
+            // 
+            this.txtDescuento.BackColor = System.Drawing.Color.LightCyan;
+            this.txtDescuento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescuento.Location = new System.Drawing.Point(581, 60);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Size = new System.Drawing.Size(68, 20);
+            this.txtDescuento.TabIndex = 32;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(489, 62);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(65, 13);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Descuento :";
+            // 
             // txtPrecioVenta
             // 
             this.txtPrecioVenta.BackColor = System.Drawing.Color.LightCyan;
@@ -198,6 +236,15 @@
             this.label12.TabIndex = 31;
             this.label12.Text = "Precio Venta :";
             // 
+            // txtStockActual
+            // 
+            this.txtStockActual.BackColor = System.Drawing.Color.LightCyan;
+            this.txtStockActual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtStockActual.Location = new System.Drawing.Point(178, 60);
+            this.txtStockActual.Name = "txtStockActual";
+            this.txtStockActual.Size = new System.Drawing.Size(68, 20);
+            this.txtStockActual.TabIndex = 30;
+            // 
             // txtCantidad
             // 
             this.txtCantidad.BackColor = System.Drawing.Color.LightCyan;
@@ -215,6 +262,17 @@
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 29;
             this.label5.Text = "Cantidad :";
+            // 
+            // btnBuscarArticulo
+            // 
+            this.btnBuscarArticulo.BackgroundImage = global::CapaPresentacion.Properties.Resources.search3;
+            this.btnBuscarArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscarArticulo.Location = new System.Drawing.Point(236, 29);
+            this.btnBuscarArticulo.Name = "btnBuscarArticulo";
+            this.btnBuscarArticulo.Size = new System.Drawing.Size(38, 23);
+            this.btnBuscarArticulo.TabIndex = 19;
+            this.btnBuscarArticulo.UseVisualStyleBackColor = true;
+            this.btnBuscarArticulo.Click += new System.EventHandler(this.btnBuscarArticulo_Click);
             // 
             // txtArticulo
             // 
@@ -353,6 +411,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "VENTAS";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label11
             // 
@@ -362,6 +421,17 @@
             this.label11.Size = new System.Drawing.Size(43, 13);
             this.label11.TabIndex = 19;
             this.label11.Text = "Fecha :";
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.BackgroundImage = global::CapaPresentacion.Properties.Resources.search3;
+            this.btnBuscarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(525, 33);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(38, 23);
+            this.btnBuscarCliente.TabIndex = 15;
+            this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // txtIdVenta
             // 
@@ -398,6 +468,45 @@
             this.label7.Size = new System.Drawing.Size(45, 13);
             this.label7.TabIndex = 11;
             this.label7.Text = "Cliente :";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources._new;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(492, 363);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(71, 23);
+            this.btnNuevo.TabIndex = 7;
+            this.btnNuevo.Text = "&Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.cancel;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(672, 362);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(79, 23);
+            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.save;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(580, 362);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(78, 23);
+            this.btnGuardar.TabIndex = 6;
+            this.btnGuardar.Text = "&Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label4
             // 
@@ -449,6 +558,30 @@
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnComprobante
+            // 
+            this.btnComprobante.Image = global::CapaPresentacion.Properties.Resources.printer;
+            this.btnComprobante.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnComprobante.Location = new System.Drawing.Point(681, 26);
+            this.btnComprobante.Name = "btnComprobante";
+            this.btnComprobante.Size = new System.Drawing.Size(93, 23);
+            this.btnComprobante.TabIndex = 13;
+            this.btnComprobante.Text = "&Comprobante";
+            this.btnComprobante.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnComprobante.UseVisualStyleBackColor = true;
+            // 
+            // btnmostrar
+            // 
+            this.btnmostrar.Image = global::CapaPresentacion.Properties.Resources.search;
+            this.btnmostrar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnmostrar.Location = new System.Drawing.Point(498, 26);
+            this.btnmostrar.Name = "btnmostrar";
+            this.btnmostrar.Size = new System.Drawing.Size(92, 23);
+            this.btnmostrar.TabIndex = 12;
+            this.btnmostrar.Text = "&Mostrar todos";
+            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnmostrar.UseVisualStyleBackColor = true;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -474,6 +607,44 @@
             this.dtFecha1.Size = new System.Drawing.Size(106, 20);
             this.dtFecha1.TabIndex = 9;
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.printer;
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(780, 25);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(71, 23);
+            this.btnImprimir.TabIndex = 6;
+            this.btnImprimir.Text = "&Imprimir";
+            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            // 
+            // btnAnular
+            // 
+            this.btnAnular.Image = global::CapaPresentacion.Properties.Resources.delete;
+            this.btnAnular.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnAnular.Location = new System.Drawing.Point(596, 25);
+            this.btnAnular.Name = "btnAnular";
+            this.btnAnular.Size = new System.Drawing.Size(72, 23);
+            this.btnAnular.TabIndex = 7;
+            this.btnAnular.Text = "&Eliminar";
+            this.btnAnular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAnular.UseVisualStyleBackColor = true;
+            this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.search;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(407, 26);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(68, 23);
+            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.Text = "&Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // dataListado
             // 
             this.dataListado.AllowUserToAddRows = false;
@@ -489,6 +660,8 @@
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListado.Size = new System.Drawing.Size(945, 150);
             this.dataListado.TabIndex = 5;
+            this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
+            this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
             // 
             // Eliminar
             // 
@@ -514,6 +687,7 @@
             this.chkEliminar.TabIndex = 3;
             this.chkEliminar.Text = "Eliminar";
             this.chkEliminar.UseVisualStyleBackColor = true;
+            this.chkEliminar.CheckedChanged += new System.EventHandler(this.chkEliminar_CheckedChanged);
             // 
             // label2
             // 
@@ -550,128 +724,6 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "VENTAS";
             // 
-            // btnmostrar
-            // 
-            this.btnmostrar.Image = global::CapaPresentacion.Properties.Resources.search;
-            this.btnmostrar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnmostrar.Location = new System.Drawing.Point(498, 26);
-            this.btnmostrar.Name = "btnmostrar";
-            this.btnmostrar.Size = new System.Drawing.Size(92, 23);
-            this.btnmostrar.TabIndex = 12;
-            this.btnmostrar.Text = "&Mostrar todos";
-            this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnmostrar.UseVisualStyleBackColor = true;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.printer;
-            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(780, 25);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(71, 23);
-            this.btnImprimir.TabIndex = 6;
-            this.btnImprimir.Text = "&Imprimir";
-            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // btnAnular
-            // 
-            this.btnAnular.Image = global::CapaPresentacion.Properties.Resources.delete;
-            this.btnAnular.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnAnular.Location = new System.Drawing.Point(596, 25);
-            this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(72, 23);
-            this.btnAnular.TabIndex = 7;
-            this.btnAnular.Text = "&Eliminar";
-            this.btnAnular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAnular.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.search;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(407, 26);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(68, 23);
-            this.btnBuscar.TabIndex = 8;
-            this.btnBuscar.Text = "&Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // btnQuitar
-            // 
-            this.btnQuitar.Image = global::CapaPresentacion.Properties.Resources.delete1;
-            this.btnQuitar.Location = new System.Drawing.Point(724, 49);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(30, 26);
-            this.btnQuitar.TabIndex = 40;
-            this.btnQuitar.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Image = global::CapaPresentacion.Properties.Resources.add_file;
-            this.btnAgregar.Location = new System.Drawing.Point(724, 11);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(30, 28);
-            this.btnAgregar.TabIndex = 39;
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscarArticulo
-            // 
-            this.btnBuscarArticulo.BackgroundImage = global::CapaPresentacion.Properties.Resources.search3;
-            this.btnBuscarArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscarArticulo.Location = new System.Drawing.Point(236, 29);
-            this.btnBuscarArticulo.Name = "btnBuscarArticulo";
-            this.btnBuscarArticulo.Size = new System.Drawing.Size(38, 23);
-            this.btnBuscarArticulo.TabIndex = 19;
-            this.btnBuscarArticulo.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.BackgroundImage = global::CapaPresentacion.Properties.Resources.search3;
-            this.btnBuscarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(525, 33);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(38, 23);
-            this.btnBuscarCliente.TabIndex = 15;
-            this.btnBuscarCliente.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources._new;
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(492, 363);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(71, 23);
-            this.btnNuevo.TabIndex = 7;
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.cancel;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(672, 362);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(79, 23);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.save;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(580, 362);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(78, 23);
-            this.btnGuardar.TabIndex = 6;
-            this.btnGuardar.Text = "&Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -683,45 +735,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnComprobante
-            // 
-            this.btnComprobante.Image = global::CapaPresentacion.Properties.Resources.printer;
-            this.btnComprobante.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnComprobante.Location = new System.Drawing.Point(681, 26);
-            this.btnComprobante.Name = "btnComprobante";
-            this.btnComprobante.Size = new System.Drawing.Size(93, 23);
-            this.btnComprobante.TabIndex = 13;
-            this.btnComprobante.Text = "&Comprobante";
-            this.btnComprobante.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnComprobante.UseVisualStyleBackColor = true;
-            // 
-            // txtStockActual
-            // 
-            this.txtStockActual.BackColor = System.Drawing.Color.LightCyan;
-            this.txtStockActual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtStockActual.Location = new System.Drawing.Point(178, 60);
-            this.txtStockActual.Name = "txtStockActual";
-            this.txtStockActual.Size = new System.Drawing.Size(68, 20);
-            this.txtStockActual.TabIndex = 30;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(489, 62);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 13);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "Descuento :";
-            // 
-            // txtDescuento
-            // 
-            this.txtDescuento.BackColor = System.Drawing.Color.LightCyan;
-            this.txtDescuento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescuento.Location = new System.Drawing.Point(581, 60);
-            this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(68, 20);
-            this.txtDescuento.TabIndex = 32;
             // 
             // frmVenta
             // 

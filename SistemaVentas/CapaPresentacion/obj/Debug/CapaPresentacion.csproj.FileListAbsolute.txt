@@ -36,3 +36,6 @@ E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.fr
 E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmIngreso.resources
 E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaArticulo_Ingreso.resources
 E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaProveedor_Ingreso.resources
+E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmVenta.resources
+E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaArticulo_Venta.resources
+E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaCliente_Venta.resources
