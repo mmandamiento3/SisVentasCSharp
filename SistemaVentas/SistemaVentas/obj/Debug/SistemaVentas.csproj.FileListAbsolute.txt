@@ -26,3 +26,5 @@ E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\bin\Debug\CapaDatos.pdb
 E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\obj\Debug\SistemaVentas.csprojResolveAssemblyReference.cache
 E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\obj\Debug\SistemaVentas.Properties.Resources.resources
 E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\obj\Debug\SistemaVentas.csproj.GenerateResource.Cache
+E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll

@@ -569,6 +569,7 @@
             this.btnComprobante.Text = "&Comprobante";
             this.btnComprobante.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnComprobante.UseVisualStyleBackColor = true;
+            this.btnComprobante.Click += new System.EventHandler(this.btnComprobante_Click);
             // 
             // btnmostrar
             // 

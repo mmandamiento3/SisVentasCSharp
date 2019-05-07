@@ -466,6 +466,13 @@ namespace CapaPresentacion
                 MensajeError("No hay FIla para remover mihelmano");
             }
         }
+
+        private void btnComprobante_Click(object sender, EventArgs e)
+        {
+            frmReporteFactura frm = new frmReporteFactura();
+            frm.Idventa = Convert.ToInt32(this.dataListado.CurrentRow.Cells["idventa"].Value);
+            frm.ShowDialog();
+        }
     }
     }
 
