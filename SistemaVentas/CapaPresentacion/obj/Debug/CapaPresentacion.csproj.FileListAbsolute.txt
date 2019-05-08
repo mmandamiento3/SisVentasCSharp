@@ -45,3 +45,4 @@ E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\bin\Debug\es\Microsoft.Report
 E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmReporteFactura.resources
 E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\RdlCompile.cache
 E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\RdlCompile.compiled
+E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmReporteArticulos.resources

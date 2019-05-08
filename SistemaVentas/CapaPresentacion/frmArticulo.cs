@@ -386,5 +386,11 @@ namespace CapaPresentacion
                 this.MensajeError("DEbe de seleccionar primero el registro a EDITAR :)s");
             }
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmReporteArticulos fra = new frmReporteArticulos();
+            fra.ShowDialog();
+        }
     }
 }
