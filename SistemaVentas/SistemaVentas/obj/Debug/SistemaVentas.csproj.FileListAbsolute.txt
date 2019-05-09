@@ -28,3 +28,7 @@ E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\obj\Debug\SistemaVentas.Properti
 E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\obj\Debug\SistemaVentas.csproj.GenerateResource.Cache
 E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\bin\Debug\SistemaVentas.exe.manifest
+E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\bin\Debug\SistemaVentas.application
+E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\obj\Debug\SistemaVentas.exe.manifest
+E:\SistemaVentas_C#\SistemaVentas\SistemaVentas\obj\Debug\SistemaVentas.application

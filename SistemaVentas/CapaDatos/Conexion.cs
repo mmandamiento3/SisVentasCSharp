@@ -8,8 +8,9 @@ namespace CapaDatos
 {
     class Conexion
     {
-        public static string Cn = "Data Source=DESKTOP-SG96IFF; Initial Catalog=dbventas; Integrated Security=true";
-           
+        //Se ahce referencia a la clase app.config, ya que esa se puede modificar al momento
+        //de instalar, si embargo la clase CONEXIOn seguira sin alterarse.
+        public static string Cn = Properties.Settings.Default.cn;
         
     }
     
