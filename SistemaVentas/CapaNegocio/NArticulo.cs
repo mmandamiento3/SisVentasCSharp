@@ -68,6 +68,10 @@ namespace CapaNegocio
 
         }
 
+        public static DataTable Stock()
+        {
+            return new DArticulo().Stock();
+        }
 
 
 

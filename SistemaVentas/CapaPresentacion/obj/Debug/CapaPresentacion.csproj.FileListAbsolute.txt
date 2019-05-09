@@ -46,3 +46,4 @@ E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.fr
 E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\RdlCompile.cache
 E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\RdlCompile.compiled
 E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmReporteArticulos.resources
+E:\SistemaVentas_C#\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.frmConsulta_Stock_Articulos.resources
